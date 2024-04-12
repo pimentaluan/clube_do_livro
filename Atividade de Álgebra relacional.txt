@@ -1,0 +1,28 @@
+Atividade de álgebra relacional:
+
+1 - Quais são os nomes dos livros que possuem preço maior que R$50?
+π nome_livro (σ preco > 50 (Livros))
+
+2 - Quais são os vendedores que possuem mais de 5 anos de experiência?
+π nome (σ anos_exp > 5 (Vendedores))
+
+3 - Quais são os códigos de livros recomendados pela revista ‘BestBooks Magazine’?
+π id_livro (σ fonte_recomendacao = 'BestBooks Magazine' (LivrosRecomendados))
+
+4 - Quais são os livros com estoque menor que 20 unidades?
+π nome_livro (σ qtd_estoque < 20 (Livros))
+
+5 - Quais são os códigos dos livros mais vendidos durante o ano de 2021?
+π id_livro (σ ano = 2021 (LivroMaisVendidos))
+
+6 - Quais são os livros com preço entre R$30 e R$50?
+π nome_livro (σ preco > 30 ∧ preco < 50(Livros))
+
+7 - Existe algum livros sem exemplar em estoque? Quais?
+π nome_livro (σ qtd_estoque = 0 (Livros)) - Vendo isso, não há livro sem nenhum exemplar no estoque
+
+8 - Quais são os livros que custam mais de R$ 50 e contém mais de 5 unidades no estoque?
+π nome_livro (σ preco > 50 ∧ qtd_estoque > 5 (Livros)) - 'O Simbolo Perdido' e 'A Maldicao do Tigre'
+
+9 - Quais livros atendem os requisitos do amigo oculto do cliente André: ser um livro de George Orwell ou de qualquer outra autoria que seja mais caro que 30 reais?
+π nome_livro (σ autor = 'George Orwell' ∨ preco > 30 (Livros))
